@@ -14,6 +14,5 @@ def projectManager = ComponentAccessor.projectManager
 def projectObj = projectManager.getProjectObjByKey (projectKey)
 
 projectManager.setCurrentCounterForProject (projectObj, 0)
-projectManager.getCurrentCounterForProject (projectObj.id)
+assert projectManager.getCurrentCounterForProject (projectObj.id) == 0
 
-// If result is zero, then script was successful
